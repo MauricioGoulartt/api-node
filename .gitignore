@@ -1,0 +1,7 @@
+# Arquivo .gitignore
+
+# Ignora a pasta node_modules
+/node_modules
+
+# Ignora o arquivo .env
+/.env
