@@ -34,7 +34,12 @@ router.post("/signup", async (req, res) => {
     const savedUser = await user.save();
 
     const { password, ...userWithoutPassword } = savedUser._doc;
-    res.status(201).json(userWithoutPassword);
+    const { _id, created_at, modified_at } = userWithoutPassword
+    res.status(200).json({
+      id: _id,
+      created_at: created_at,
+      modified_at: modified_at
+    });
   } catch (err) {
     // Se um erro ocorrer ao salvar o usuário...
     if (err.code === 11000) {
@@ -62,7 +67,7 @@ router.post("/signin", async (req, res) => {
     }
 
     // Compara a senha fornecida com a senha hashada do usuário
-    const validPassword = bcrypt.compare(password, user.password);
+    const validPassword = await bcrypt.compare(password, user.password);
 
     // Se a senha for inválida, retorna um erro 401
     if (!validPassword) {
@@ -89,7 +94,6 @@ router.get("/user", async (req, res) => {
     // Verifica o token e extrai os dados do usuário
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     const { id } = decoded;
-    console.log(id)
 
     // Busca o usuário no banco de dados
     const user = await User.findById(id);
@@ -106,21 +110,6 @@ router.get("/user", async (req, res) => {
     // Se um erro ocorrer (por exemplo, o token é inválido), retorna um erro 401
     res.status(401).json({ message: "Invalid token" });
   }
-});
-
-// Endpoint de atualização
-router.put("/user/me", async (req, res) => {
-  // Implementar a atualização do usuário aqui
-});
-
-// Endpoint de exclusão
-router.delete("/user/me", async (req, res) => {
-  // Implementar a exclusão do usuário aqui
-});
-
-// Endpoint para obter informações do usuário
-router.get("/user/me", async (req, res) => {
-  // ...same as before
 });
 
 // Exporta o roteador para ser usado em outro lugar
