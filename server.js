@@ -15,9 +15,9 @@ app.use(json());
 app.use(urlencoded({ extended: true }));
 
 mongoose.connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    w: 'majority'
+    useNewUrlParser: true, // análise da url de conexão
+    useUnifiedTopology: true, // novo mecanismo de desc e monitoring de servidores
+    w: 'majority' // maior durabilidade dos dados gravados
 }).then(() => console.log("MongoDB connected..."))
   .catch(err => console.log(err));
 
