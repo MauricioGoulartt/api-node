@@ -7,6 +7,8 @@ Esta API foi criada para gerenciar a autenticação de usuários de um aplicativ
 
 - ipv4 público: 18.231.156.186
 
+atualemnte executando na AWS ec2
+
 ## Tecnologias Usadas
 
 * [Node.js](https://nodejs.org/)
