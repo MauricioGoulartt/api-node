@@ -24,7 +24,6 @@ atualemnte executando na AWS ec2
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
 * Você tem uma máquina `Windows/Linux/Mac` com uma versão recente do `Node.js` instalada.
-* Você tem uma instância AWS EC2 pronta para uso.
 
 ## Como executar
 
