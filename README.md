@@ -1,5 +1,4 @@
 # Api-NodeJS
-API
 
 # API de Autenticação
 
