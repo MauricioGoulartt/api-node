@@ -33,7 +33,7 @@ Para instalar e usar esta API, siga os seguintes passos:
 2. Acesse a pasta do projeto no terminal/cmd.
 3. Instale as dependências com `npm install`.
 4. Execute o servidor com `npm start`.
-5. Acesse as rotas através de `http://localhost:<YOUR_PORT>/`.
+5. Acesse as rotas através de `(http://18.231.156.186:3333/)`.
 
 ## Rotas da API
 
