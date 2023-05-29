@@ -6,6 +6,7 @@ API
 Esta API foi criada para gerenciar a autenticação de usuários de um aplicativo. Ela usa a autenticação baseada em token JWT e oferece endpoints para registrar um novo usuário, fazer login e obter informações do usuário autenticado.
 
 - ipv4 público: 18.231.156.186
+- PORT: 3333
 
 atualemnte executando na AWS ec2
 
