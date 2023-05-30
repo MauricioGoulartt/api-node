@@ -7,7 +7,7 @@ Esta API foi criada para gerenciar a autenticação de usuários de um aplicativ
 - ipv4 público: 18.231.156.186
 - PORT: 3333
 
-atualemnte executando na AWS ec2
+atualmente executando na AWS ec2
 
 ## Tecnologias Usadas
 
