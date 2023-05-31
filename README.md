@@ -18,6 +18,7 @@ atualmente executando na AWS ec2
 * [bcrypt](https://github.com/kelektiv/node.bcrypt.js)
 * [dotenv](https://github.com/motdotla/dotenv)
 * [body-parser](https://github.com/expressjs/body-parser)
+* [eslint](https://github.com/eslint/eslint)
 
 ## Pré-requisitos
 
